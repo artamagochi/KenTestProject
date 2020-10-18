@@ -1,15 +1,21 @@
 import React from 'react';
-import {StyleSheet, TextInput} from 'react-native';
+import {StyleSheet,View,Button, TextInput} from 'react-native';
 
-export default function AddButton({ value, changeHandler }) {
+export default function AddButton({ value, changeHandler, buttonHandler }) {
 
   return(
-    <TextInput
-      style={styles.item}
-      onChangeText={(value) => changeHandler(value)}
-      value={value}
-      placeholder="Add activity"
-    />
+    <View>
+      <TextInput
+        style={styles.item}
+        onChangeText={(value) => changeHandler(value)}
+        value={value}
+        placeholder="Add activity"
+      />
+      <Button
+        title="Add"
+        onPress={() => buttonHandler(value)}
+      />
+    </View>
   )
 }
 
