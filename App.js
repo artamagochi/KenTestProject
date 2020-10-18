@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import styles from './assets/styles/styles.js';
 import Header from './assets/components/header';
 import TodoItem from './assets/components/todoItem';
-import TodoItem from './assets/components/addButton';
+import addButton from './assets/components/addButton';
 
 
 export default function App() {
