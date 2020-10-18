@@ -8,13 +8,11 @@ import AddButton from './assets/components/addButton';
 
 export default function App() {
 
-  const [todos, setTodos] = useState([
-    {text: 'fisrt', key: '1'},
-    {text: 'second', key: '2'},
-    {text: 'thrid', key: '3'},
-  ])
+  const [counter, updateCount] = useState(1)
 
-  const [textInputValue, setTextInputValue] = useState('cosa');
+  const [todos, setTodos] = useState([])
+
+  const [textInputValue, setTextInputValue] = useState('');
 
   const pressHandler = (key) => {
     setTodos((prevTodos) =>{
@@ -22,6 +20,10 @@ export default function App() {
     })
   }
 
+  function addElement(action){
+    updateCount((counter) => counter + 1)
+    setTodos(todos.concat({text: action, key: counter.toString()}))
+  }
 
   return (
     <View style = {styles.container}>
@@ -30,6 +32,7 @@ export default function App() {
         <AddButton
           value={textInputValue}
           changeHandler={setTextInputValue}
+          buttonHandler = {addElement}
         />
         {/*to form*/}
         <View style={styles.list}>
