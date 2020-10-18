@@ -1,9 +1,15 @@
 import React from 'react';
 import {StyleSheet, TextInput} from 'react-native';
 
-export default function AddButton({ item, pressHandler }) {
+export default function AddButton({ value, changeHandler }) {
+
   return(
-    <TextInput style={styles.item} value={'Breakfast'}/>
+    <TextInput
+      style={styles.item}
+      onChangeText={(value) => changeHandler(value)}
+      value={value}
+      placeholder="Add activity"
+    />
   )
 }
 
