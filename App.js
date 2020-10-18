@@ -14,16 +14,23 @@ export default function App() {
     {text: 'thrid', key: '3'},
   ])
 
+  const [textInputValue, setTextInputValue] = useState('cosa');
+
   const pressHandler = (key) => {
     setTodos((prevTodos) =>{
       return prevTodos.filter(todo => todo.key != key)
     })
   }
 
+
   return (
     <View style = {styles.container}>
       <Header />
       <View style={styles.content}>
+        <AddButton
+          value={textInputValue}
+          changeHandler={setTextInputValue}
+        />
         {/*to form*/}
         <View style={styles.list}>
           <FlatList
