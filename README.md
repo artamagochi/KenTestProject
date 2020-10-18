@@ -1,6 +1,6 @@
 # KenTestProject
 
-To run the stuff: The project requires React Native and node.js version >= v.10.
+To run this stuff: The project requires React Native and node.js version >= v.10.
 Inside of project folder run the line `npm install -g expo-cli`, followed by`$ npm start`. 
 
 This project render a button filter in a screen. Select one item for delete it from the original list.
