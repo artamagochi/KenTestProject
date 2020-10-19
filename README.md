@@ -14,7 +14,7 @@ You can add an item in the input box:
 To add the new element to list push ADD button
 ![alt text](https://github.com/artamagochi/KenTestProject/blob/main/issues/actionTwo.png)
 
-The items wil be showed in the screen
+The items will be showed in the screen
 ![alt text](https://github.com/artamagochi/KenTestProject/blob/main/issues/actionThree.png)
 
 To delete one item, push it
